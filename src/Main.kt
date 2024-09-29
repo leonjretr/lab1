@@ -9,6 +9,18 @@ fun main() {
     println("Welcome to our Kotlin calculator")
     println("It was made by Leonid Svietlychnyi and Roman Bak")
 
+    println("Choose an option:")
+    println("1. Basic arithmetic operations")
+    println("2. Calculate area of a triangle through the radius of the inscribed circle")
+    when (scanner.nextInt()) {
+        1 -> basicCalc(scanner)
+        2 -> calcTriangle(scanner)
+        else -> println("Invalid option.")
+    }
+
+}
+
+fun basicCalc(scanner:Scanner) {
     println("Please, choose the operation(+, -, *, /): ")
     val operator = scanner.next()
 
@@ -39,4 +51,7 @@ fun main() {
     }
 
     println("The result of $num1 $operator $num2 is: $result")
+}
+fun calcTriangle(scanner:Scanner){
+
 }
