@@ -23,18 +23,20 @@ fun main() {
         "-" -> num1 - num2
         "*" -> num1 * num2
         "/" -> {
-            if(num2!=0.0){
+            if (num2 != 0.0) {
                 num1 / num2
-            }else {
+            } else {
                 println("Your second value is 0. It's forbidden to divide by 0")
                 println("Please, choose another number")
                 return
             }
-        } else -> {
+        }
+
+        else -> {
             println("Invalid operator. Try again")
             return
         }
     }
 
-
+    println("The result of $num1 $operator $num2 is: $result")
 }
