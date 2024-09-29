@@ -33,6 +33,7 @@ fun basicCalc(scanner: Scanner) {
     val result = when (operator) {
         "+" -> num1 + num2
         "-" -> num1 - num2
+        "*" -> num1 * num2
 
         else -> {
             println("Був обраний неправильний оператор. Спробуйте ще раз ")
