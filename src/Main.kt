@@ -1,4 +1,5 @@
 import java.util.Scanner
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
@@ -17,8 +18,23 @@ fun main() {
     println("Enter second value:")
     val num2 = scanner.nextDouble()
 
-
-
+    val result = when (operator) {
+        "+" -> num1 + num2
+        "-" -> num1 - num2
+        "*" -> num1 * num2
+        "/" -> {
+            if(num2!=0.0){
+                num1 / num2
+            }else {
+                println("Your second value is 0. It's forbidden to divide by 0")
+                println("Please, choose another number")
+                return
+            }
+        } else -> {
+            println("Invalid operator. Try again")
+            return
+        }
+    }
 
 
 }
