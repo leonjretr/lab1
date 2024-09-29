@@ -14,6 +14,9 @@ fun main() {
     println("Enter first value:")
     val num1 = scanner.nextDouble()
 
+    println("Enter second value:")
+    val num2 = scanner.nextDouble()
+
 
 
 
