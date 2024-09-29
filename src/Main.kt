@@ -19,9 +19,29 @@ fun main() {
     }
 
 }
-fun basicCalc(scanner: Scanner) {
 
+fun basicCalc(scanner: Scanner) {
+    println("Будь-ласка, виберіть операцію(+) ")
+    val operator = scanner.next()
+
+    println("Введіть перше значення:")
+    val num1 = scanner.nextDouble()
+
+    println("Введіть друге значення:")
+    val num2 = scanner.nextDouble()
+
+    val result = when (operator) {
+        "+" -> num1 + num2
+
+        else -> {
+            println("Був обраний неправильний оператор. Спробуйте ще раз ")
+            return
+        }
+    }
+
+    println("Результат $num1 $operator $num2 дорівнює: $result")
 }
+
 fun calcTriangle(scanner: Scanner) {
 
 }
