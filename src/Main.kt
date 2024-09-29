@@ -54,5 +54,34 @@ fun basicCalc(scanner: Scanner) {
 }
 
 fun calcTriangle(scanner: Scanner) {
+    println("Введіть значення довжин трьох сторін трикутника:")
 
+    print("Перша сторона: ")
+    val a = scanner.nextDouble()
+
+    print("Друга сторона: ")
+    val b = scanner.nextDouble()
+
+    print("Третя сторона: ")
+    val c = scanner.nextDouble()
+
+    if (!isValidTriangle(a, b, c)) {
+        println("Сторони таких довжин не формують правильний трикутник.")
+        return
+    }
+
+    // обчислення півпериметра
+    val s = (a + b + c) / 2
+
+    println("Введіть радіус вписаного кола:")
+    val r = scanner.nextDouble()
+
+    // обчислення площи через формулу: Площа = r * s
+    val area = r * s
+
+    println("Площа трикутника зі сторонами $a, $b, $c і радіусом вписаного кола $r дорівнює: $area")
+}
+
+fun isValidTriangle(a: Double, b: Double, c: Double): Boolean {
+    return (a + b > c) && (a + c > b) && (b + c > a)
 }
